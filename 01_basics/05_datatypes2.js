@@ -25,6 +25,24 @@ const myFunction = function(){
     console.log("Hello World");
 }
 
-console.log(typeof myFunction);
-console.log(typeof outsideTemp);
-console.log(typeof anotherId);
+// console.log(typeof myFunction);
+// console.log(typeof outsideTemp);
+// console.log(typeof anotherId);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack(Primitive),Heap(Non-Primitive)
+
+let myName = "Aman";
+let lastName = myName;
+lastName = "Kumar";
+// console.log(myName);
+// console.log(lastName);
+let user1 = {
+    name:"Aman",
+    age:21
+}
+let user2 = user1;
+user2.name = "Kumar";
+console.log(user1.name);
+console.log(user2.name);
