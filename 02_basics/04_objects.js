@@ -42,8 +42,39 @@ const users = [
 ]
 // console.log(users[0].email);
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+////////////////////////////////Object Destructure & Json Api///////////////////////////////
+
+const course = {
+    courseName:"Js",
+    price:"999",
+    courseInstructor:"Hitesh"
+}
+
+//Generally we get values from object with dot like
+// course.courseInstructor
+//but with destructuring
+
+const {courseInstructor: teacher} = course
+// console.log(teacher);
+
+//        json API
+
+  //json kaisa hota hai
+  //   {
+  //     "name":"aman",
+  //     "age": 21,
+  //     "learning" : "JS"
+  //   }
+    //kai baar API array ke format mein hoti hai
+    //[
+    //    {},
+    //    {},
+    //    {}
+    //]
+
