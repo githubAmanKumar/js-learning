@@ -41,6 +41,6 @@ let val1;
 
 // condition ? true : false
 
-// const teaPrice = 100;
+const teaPrice = 100;
 
-// teaPrice <=50 ? console.log("less than 50"):console.log("greater than 50");
+teaPrice <=50 ? console.log("less than 50"):console.log("greater than 50");
