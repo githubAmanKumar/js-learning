@@ -42,8 +42,8 @@
 //     console.log("allow to buy courses");
 // }
 
-// const UserLoggedInFromGoogle = false;
-// const UserLoggedInFromEmail = true;
-// if (UserLoggedInFromEmail || UserLoggedInFromGoogle) {
-//     console.log("user can log in");
-// }
+const UserLoggedInFromGoogle = false;
+const UserLoggedInFromEmail = true;
+if (UserLoggedInFromEmail || UserLoggedInFromGoogle) {
+    console.log("user can log in");
+}
