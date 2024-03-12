@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: turquoise;
+        }
+
+        #main {
+            height: 300px;
+            width: 300px;
+            background-color: teal;
+            border: 1px solid black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #photo {
+            width: 80%;
+            height: 80%;
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        #photoImg {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        #photoInfo {
+            width: 100%;
+            height: 10%;
+            font-size: 30px;
+            display: flex;align-items: center;justify-content: center;
+            color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 0: request not initialized
+    1: server connection established
+    2: request received
+    3: processing request
+    4: request finished and response is ready -->
+
+    <div id="main">
+        <div id="photo">
+            <img src="" id="photoImg" alt="">
+        </div>
+        <div id="photoInfo"></div>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/githubAmanKumar'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            // console.log(data);
+            var photo_url = data.avatar_url;
+            var photoImg = document.getElementById("photoImg").src = photo_url;
+            var photoImg = document.getElementById("photoInfo").innerText = data.name+" "+ data.followers;
+            console.log(photoImg);
+        }
+    }
+    xhr.send()
+</script>
+
+</html>
