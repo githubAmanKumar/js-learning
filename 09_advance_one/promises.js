@@ -74,3 +74,25 @@ async function consumePromiseFive() {
     }
 }
 consumePromiseFive()
+
+
+// async function getAllUsers() {
+//     try {
+//         const response = fetch('https://jsonplaceholder.typicode.com/users')
+//     const data = await response.json();
+//     console.log(data);
+//     } catch (error) {
+//         console.log("E:", error);
+//     }
+// }
+
+// getAllUsers()
+
+fetch('https://api.github.com/users/githuAmankumar')
+.then((res)=>{
+    return res.json();
+})
+.then((res)=>{
+    console.log(res);
+})
+.catch((error)=> console.log(error))
